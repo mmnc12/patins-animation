@@ -1,6 +1,7 @@
  section.gallery {
    width: 100%;
-   max-width: 80rem;
+   /* max-width: 80rem; */
+   max-width: 22.5rem;
    padding: 2.5rem 2rem;
 
    margin-inline: auto;
@@ -10,7 +11,7 @@
    }
 
    & header span {
-     font: 500 var(--text-sm)/1.5 var(--ff-base);
+     font: 500 var(--text-msm)/1.5 var(--ff-base);
    }
 
    & img {
@@ -46,7 +47,7 @@
      }
 
      &>img {
-       height: 25rem;
+       height: 16rem;
        object-fit: cover;
        transition: scale 500ms;
      }
@@ -108,14 +109,26 @@
    }
 
    @media (width >=80em) {
+     max-width: 80rem;
+
      & .content {
-      margin-top: 2rem;
+       margin-top: 2rem;
        display: grid;
        grid-template-areas:
          " A B B "
          " C C D ";
 
        gap: 2.5rem;
+     }
+
+     & header span {
+       font: 500 var(--text-sm)/1.5 var(--ff-base);
+     }
+
+     & figure {
+       &>img {
+         height: 25rem;
+       }
      }
    }
  }
